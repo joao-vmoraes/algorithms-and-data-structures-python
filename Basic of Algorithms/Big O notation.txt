@@ -1,0 +1,14 @@
+		Big O Notation  O(n)
+
+-It is a Way of describing the efficiency of an Algorithm
+-An Objective comparison between algorithms.
+-It tell us how the Algorithm's runtime or the memory usage grows as the input increases
+
+O(1) - Constant time , The Algorithm takes the same amount of runtime independently/regardless of the input size
+
+O(n) - Linear time, the runtime grows proportionally as the input size
+
+O(n²) = Quadratic time, the runtime grows exponentially with the size of the input.
+
+
+. Big O focuses on the worst-case scenario and ignores constant factors, because what matters is how the algorithm behaves with very large inputs. It's a fundamental tool for comparing the efficiency of different solutions to the same problem.
