@@ -9,8 +9,16 @@ def MergeSort(list, start=0 , end = None):
         merge(list , start , mid, end)
 
 def merge(list , start , mid , end):
-    left = list[start:mid]
-    right = list[mid:end]
+    n1 = mid - start 
+    n2 = end - mid
+
+    left = [0] * n1
+    right = [0] * n2
+
+    for i in range(n1):
+        left[i] = list[start + i]
+    for i in range(n2):
+        right[i] = list[mid + i]
 
     i, j = 0 , 0
     for k in range(start, end):
@@ -30,6 +38,6 @@ def merge(list , start , mid , end):
 
 
 
-array = [ 3 ,4 ,5 ,6 ,1 ,4 ,32 ,2 ,9 , 81 , 25 , 19 , 11 , 20]
+array = [ 34, 71, 22, 3 ,4 ,5 ,6 ,1 ,4 ,32 ,2 ,9 , 81 , 25 , 19 , 11 , 20]
 MergeSort(array)
 print(array)
