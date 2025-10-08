@@ -62,3 +62,48 @@ class listaLinearEsquencialCrescente:
 def linha():
     print("=" * 20)
 
+def digiteInt(mensagem):
+    while True:
+        try:
+            opcao = int(input(f"{mensagem}"))
+            return opcao
+        except:
+            print("ERRO: Tipo de dado invalido")
+
+def inicializacao():
+    return digiteInt("Digite o tamanho da sua lista: ")
+
+def menu():
+    linha()
+    print("[1] - Listar")
+    print("[2] - Procurar")
+    print("[3] - Inserir")
+    print("[4] - Remover")
+    print("[5] - Sair")
+
+
+#MAIN
+tamanho = inicializacao()
+ListaLinear = listaLinearEsquencialCrescente(tamanho)
+
+while True:
+    menu()
+    opcao = digiteInt("Escolha sua opcao: ")
+    linha()
+
+    if opcao == 1:
+        ListaLinear.imprimir()
+    elif opcao == 2:
+        numero = digiteInt("Digite um numero a ser procurado na lista: ")
+        print(f"O numero esta na posicao: {ListaLinear.buscar(numero)}")
+    elif opcao == 3:
+        numero = digiteInt("Digite um numero a ser inserido na lista: ")
+        ListaLinear.inserir(numero)
+    elif opcao == 4:
+        numero = digiteInt("Digite um numero a ser removido na lista: ")
+        ListaLinear.remover(numero)
+    elif opcao == 5:
+        print("Ate logo!")
+        break
+    else:
+        continue
